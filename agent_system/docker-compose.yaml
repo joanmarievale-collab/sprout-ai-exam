@@ -1,0 +1,28 @@
+services:
+  sentiment_api:
+    build:
+      context: ./sentiment_api_service
+      dockerfile: Dockerfile.api
+    env_file:
+      - .env
+    ports:
+      - "8000:8001"
+
+  agent:
+    build:
+      context: ./agent_service
+    env_file:
+      - .env
+    depends_on:
+      - sentiment_api
+
+  chat_ui:
+    build:
+      context: ./streamlit
+      dockerfile: Dockerfile.ui
+    env_file:
+      - .env
+    ports:
+      - "8501:8501"
+    depends_on:
+      - sentiment_api
