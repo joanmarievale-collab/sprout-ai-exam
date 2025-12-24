@@ -1,0 +1,7 @@
+text,expected_sentiment,model_output,confidence_score
+Everybody love you,,positive,95.05
+NOrth America,,neutral,70.65
+You're so ugly,,negative,97.71
+"Yes, I do",,positive,52.6
+"No, I don't",,neutral,57.72
+how can you not love Obama? he makes jokes about himself,,negative,50.48
