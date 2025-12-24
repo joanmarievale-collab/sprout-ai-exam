@@ -102,7 +102,7 @@ cd sprout-ai-exam
 - [2. Sign up or log in with your account]
 - [3. Navigate to API Keys section]
 - [4. Click Create New API Key]
-- [5. Copy the key (you'll need it in Step 4)]
+- [5. Copy the key (you'll need it in Step 3)]
 
 #### Step 3: Create Environment File
 Create a .env file in the project root:
@@ -132,6 +132,7 @@ GROQ_API_KEY=your_groq_api_key_here
 SENTIMENT_AGENT_HOST=localhost
 SENTIMENT_AGENT_PORT=8000
 ```
+Replace your_groq_api_key_here with your actual Groq API key from Step 2.
 ---
 
 
