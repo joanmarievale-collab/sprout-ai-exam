@@ -96,7 +96,16 @@ cd sprout-ai-exam
 ```
 ---
 
-#### Step 2: Create .env File
+#### Step 2: Step 2: Get a Groq API Key
+
+- [1. Go to https://console.groq.com]
+- [2. Sign up or log in with your account]
+- [3. Navigate to API Keys section]
+- [4. Click Create New API Key]
+- [5. Copy the key (you'll need it in Step 4)]
+
+#### Step 3: Create Environment File
+Create a .env file in the project root:
 
 ```bash
 # Create empty .env file
@@ -104,6 +113,25 @@ touch .env
 ```
 ##### Add the following content to .env:
 
+```bash
+# ===== App =====
+APP_NAME=Technical Exam Sentiment Analysis
+APP_VERSION=1.0.0
+DEBUG=false
+API_PREFIX=/sentiment
+
+# ===== Model =====
+MODEL_NAME=cardiffnlp/twitter-roberta-base-sentiment
+DEVICE=auto
+MAX_TOKENS=512
+
+# ===== Groq LLM (REQUIRED) =====
+GROQ_API_KEY=your_groq_api_key_here
+
+# ===== Networking =====
+SENTIMENT_AGENT_HOST=localhost
+SENTIMENT_AGENT_PORT=8000
+```
 ---
 
 
